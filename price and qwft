@@ -1,0 +1,10 @@
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+df = pd.read_csv("ny_real_estate_sold_properties_2026.csv")
+data = df[["listPrice", "sqft"]]
+#data = data.sort_values(by="listPrice")
+print(data.head())
+
+plt.bar(df["listPrice"], df["sqft"])
+plt.show()
