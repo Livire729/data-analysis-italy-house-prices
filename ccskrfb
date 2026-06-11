@@ -1,0 +1,12 @@
+import matplotlib.pyplot as plt
+import pandas as pd
+df = pd.read_csv('phishing_email_detection_2026_dataset.csv')
+plt.figure(figsize=(8,4.5))
+plt.bar(df['is_phishing'], df['has_link'])
+plt.grid(axis='y', alpha = 0.3)
+plt.tight_layout()
+plt.title("Завсисмость фишинга от прикрепленных ссылок")
+plt.xlabel("фишинг")
+plt.ylabel("прикрепленные ссылки")
+plt.tight_layout()
+plt.show()
